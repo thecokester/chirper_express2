@@ -1,0 +1,16 @@
+<!--<div ng-repeat="chirp in chirps">
+  <p> {{chirp.user}} </p>
+  <p> {{chirp.message}} </p>
+  <p> {{chirp.id}} </p>-->
+<h1> List of Chirps </h1>
+ <button type="button"> <a href='#/'> Home Sick? </a></button> 
+
+<div ng-controller="getRequest">
+ <div ng-repeat="post in postList">
+     <div ng-click='deleteData(post.id)'>
+    <p>User : {{ post.user }} </p>
+    <p>Message : {{ post.message }} </p>
+    </div>
+    <button ng-click="getId(post.id)" class='btn' type=submit>Click Here!</button>
+</div> 
+</div>

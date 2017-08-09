@@ -1,0 +1,53 @@
+<!doctype html>
+<html ng-app="myApp">
+  <head>
+    <link rel="stylesheet" href="styles.css" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular-resource.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular-route.js"></script>
+  </head>
+  <body>
+    
+ <!--HamBurger Icon-->
+<div class="bars" id="nav-action">
+  <span class="bar"> </span>
+</div>
+
+<!--Navbar Links-->
+<nav id="nav">
+  <ul>
+    <li class="shape-circle circle-one"><a href="#/add">Chirper</a></li>
+    <li class="shape-circle circle-two"><a href="#/list">List of Chirps</a></li>
+    <li class="shape-circle circle-three"><a href="#">List of Users</a></li>
+    <li class="shape-circle circle-five">
+      <a href="#/">Home</a>
+    </li>
+  </ul>
+</nav>
+
+<!--Main Body Content-->
+<article class="container">
+  <h1>Check<br> The<br> Scenery</h1>
+  <p class='textcolor'> Inspired by Majestic Mountains and Japanese Style Architecture  </p>
+  <a href="https://theflatearthsociety.org/home/" target="_blank">Secret Link</a>
+</article>
+
+
+<div ng-controller="userControl">
+     <select onchange= 'goToPage(this)'>
+       <option>Users</option>
+       <option  ng-repeat="user in userList">{{user}}</option>
+     </select>
+ </div>
+
+ 
+      
+<div ng-view> </div>
+ 
+ <script src="app.js"></script>
+
+</body>
+</html>
